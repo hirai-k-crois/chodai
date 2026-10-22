@@ -1,0 +1,216 @@
+/* required styles */
+
+body
+{
+    padding: 0;
+    margin: 0
+}
+html, body, #map
+{
+    height: 100%;
+    width: 100%;
+}
+
+/* ノード */
+.leaflet-div-marker-icon
+{
+  color:black;
+  font-weight:bold;
+  font-family: "ＭＳ ゴシック",sans-serif;
+  text-align:center;
+  font-size: 12px;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+#list {
+    box-sizing: border-box;
+    border: 1px solid #999;
+    position: absolute;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 100%;
+    height:100%;
+    bottom: 0px;
+    z-index: -1;
+    border-radius: 12px;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+}
+.cst-image {
+    width: 100%;
+    min-width: 200px;
+    border: 1px solid #999;
+}
+.cst-tbl-left {
+    vertical-align: top;
+    white-space: nowrap;
+}
+.cst-tbl-right {
+    vertical-align: top;
+    text-align: right;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+#cst-grid-main {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 9990;
+    height: 540px;
+    width: 500px;
+    background: #fff;
+    border-radius: 12px;
+    min-width: 320px;
+}
+#cst-save
+,#cst-google
+,#cst-download
+,#cst-grid-btn {
+    position: absolute;
+    top: 11px;
+    width: 32px;
+    text-align: center;
+    padding: 4px 16px;
+    color: white;
+    background: #313131;
+    border-radius: 4px;
+    z-index: 999;
+    text-decoration: none;
+}
+#cst-grid-btn {
+    left: 50px;
+}
+#cst-save {
+    left: 120px;
+}
+#cst-download {
+    left: 190px;
+}
+#cst-google {
+    left: 260px;
+    font-size: 0.5;
+    width: initial;
+}
+.cst-drag {
+    width: 100%;
+    height: 23px;
+    background: #313131;
+    border-radius: 12px 12px 0px 0px;
+}
+.filter-main {
+    padding: 10px;
+}
+#pager {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#pager .slick-pager {
+    background: none;
+    border: none;
+    height: auto;
+}
+h3 {
+    margin-bottom: 4px;
+}
+input.cst-path {
+    width: 50%;
+    box-sizing: border-box;
+}
+.cst-grid-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 4px 0 0;
+    border: none;
+    text-align: center;
+    width: 18px;
+    height: 14px;
+    font: 16px/14px Tahoma, Verdana, sans-serif;
+    color: #c3c3c3;
+    text-decoration: none;
+    font-weight: bold;
+    background: transparent;
+}
+
+/* アイコン+文言用 */
+.pmarker.leaflet-popup {
+    margin-bottom: 0px;
+}
+.leaflet-marker-icon.cst-icon-msg img,
+.leaflet-marker-icon.cst-icon-w img,
+.leaflet-marker-icon.cst-icon img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+.leaflet-marker-icon.cst-icon-w,
+.leaflet-marker-icon.cst-icon {
+    padding-top: 4px;
+    text-align: center;
+}
+.leaflet-marker-icon.cst-icon-w {
+    color: #fff;
+}
+.leaflet-marker-icon.cst-icon-msg span {
+    border: 1px solid #000;
+    background: #fff;
+    padding: 1px 4px;
+    white-space: nowrap;
+    position: absolute;
+    top: -5px;
+    left: 10px;
+}
+
+
+/* 印刷用 - backgroundは表示されないので、画像を表示 */
+.cst-bg-white {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.leaflet-popup-content {
+    margin: 4px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+@media print {
+    #cst-download
+    ,#cst-save
+    ,#cst-grid-btn {
+        display: none !important;
+    }
+}
+
+
+/* 現在地ボタン（スマホGPS） */
+.cst-location-control { background: #fff; }
+.cst-location-control .cst-location-btn {
+    width: auto !important;
+    min-width: 72px;
+    height: 34px !important;
+    line-height: 34px !important;
+    padding: 0 9px;
+    box-sizing: border-box;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+.cst-location-symbol { color: #1677ff; margin-right: 5px; }
+.cst-location-control .cst-location-btn.active { background: #e8f2ff; }
+.cst-location-control .cst-location-btn.active .cst-location-symbol { animation: cstGpsPulse 1.2s infinite; }
+@keyframes cstGpsPulse { 50% { opacity: .35; } }
+@media (max-width: 600px) {
+    .cst-location-control .cst-location-btn { min-width: 78px; height: 38px !important; line-height: 38px !important; font-size: 15px; }
+}

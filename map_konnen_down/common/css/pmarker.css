@@ -1,0 +1,113 @@
+/* =============================================================================
+ * map.css
+ * Creation Date: 2014/06/30 15:53:17
+ * Last Modified: 2014/08/01 13:52:42
+ * ============================================================================= */
+.leaflet_string {
+    text-align: center;
+    font-size: 18px;
+    background-color: rgba(255,255,255,0.9);
+    display: inline-block;
+    padding: 2px 4px;
+    /* border: 1px gray solid; */
+    position: relative;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}  
+.leaflet_string:hover {
+    text-decoration: underline;
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.leaflet-control-button-separator {
+    border-left: 1px solid #ddd;
+    display: inline-block;
+    margin: -9px 4px;
+    height: 2em;
+}
+
+div.button {
+    display: inline;
+    color: #0078A8;
+}
+div.button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+div.button.none {
+    color: black;
+}
+div.button.none:hover {
+    text-decoration: none;
+    cursor: auto;
+}
+.leaflet_dot{
+    background: rgb(43,130,203); 
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+
+.pmarker {
+}
+.pmarker .leaflet-popup-tip-container {
+    position: absolute;
+    width: 100%;
+    height: 23px;
+    background: #313131;
+    margin:0 auto;
+    border-radius: 12px 12px 0px 0px;
+    left: 0px;
+    pointer-events: initial;
+}
+.pmarker .leaflet-popup-tip {
+    width: 0px;
+    height: 0px;
+}
+.pmarker .leaflet-popup-content-wrapper {
+    padding-top: 23px;
+}
+
+.kanban {
+    width: 200px;
+}
+
+.button.disable {
+    color: #999;
+    pointer-events: none;
+}
+
+@media print{
+    .leaflet_dot{
+        border: 1px solid black;
+    }
+    .leaflet-marker-icon.join,
+    .leaflet-control,
+    .leaflet-popup-close-button {
+        display:none;
+    }
+}
+
+.capture .leaflet_dot{
+    border: 1px solid black;
+}
+.capture .leaflet-marker-icon.join,
+.capture .leaflet-control,
+.capture .leaflet-popup-close-button {
+    display:none;
+}

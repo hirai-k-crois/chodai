@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地図メニュー</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Yu Gothic", "Meiryo", sans-serif;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+		.menu {
+		    display: grid;
+		    grid-template-columns: repeat(2, 1fr); /* 2列 */
+		    gap: 10px;                             /* ボタン間隔 */
+		    max-width: 500px;                      /* 必要に応じて変更 */
+		    margin: 0 auto;
+		}
+
+		.menu a {
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    padding: 12px;
+		    background: #007bff;
+		    color: white;
+		    text-decoration: none;
+		    border-radius: 5px;
+		    font-size: 16px;
+		    font-weight: bold;
+		}
+
+        .menu a:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>舗装点検区間</h1>
+
+        <div class="menu">
+            <a href="./map_kinan_down/map.html" target="_kinandown" rel="noopener noreferrer">紀南・下り</a>
+            <a href="./map_kinan_up/map.html" target="_kinanup" rel="noopener noreferrer">紀南・上り</a>
+            <a href="./map_wakayama_down/map.html" target="_wakadown" rel="noopener noreferrer">和歌山・下り</a>
+            <a href="./map_wakayama_up/map.html" target="_wakaup" rel="noopener noreferrer">和歌山・上り</a>
+            <a href="./map_kyoto_down/map.html" target="_kyotodown" rel="noopener noreferrer">京都・下り</a>
+            <a href="./map_kyoto_up/map.html" target="_kyotoup" rel="noopener noreferrer">京都・上り</a>
+            <a href="./map_nara_down/map.html" target="_naradown" rel="noopener noreferrer">奈良・下り</a>
+            <a href="./map_nara_up/map.html" target="_naraup" rel="noopener noreferrer">奈良・上り</a>
+            <a href="./map_konnen_down/map.html" target="_kondown" rel="noopener noreferrer">今年度点検箇所・下り</a>
+            <a href="./map_konnen_up/map.html" target="_konup" rel="noopener noreferrer">今年度点検箇所・上り</a>
+
+            <a href="./map_jimusyo/map.html" target="_jimu" rel="noopener noreferrer">事務所指示区間</a>
+        </div>
+    </div>
+</body>
+</html>
